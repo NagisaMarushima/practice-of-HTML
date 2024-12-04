@@ -1,0 +1,220 @@
+@import url(sanitize.css);
+body{
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  display: flex;
+  writing-mode: vertical-rl;
+  flex-flow: column-reverse;
+}
+.body{
+  position: relative;
+  scroll-snap-type: x mandatory;
+  
+}
+header{
+  position: fixed;
+  right: 0;
+  display: inline-block;
+  height: 100%;
+  z-index: 50;
+  writing-mode: vertical-rl;
+}
+header h1{
+  display: inline;
+  font-size: large;
+  height: 100%;
+  background-color: rgb(136, 46, 46,.5);
+  border-radius: 4px;
+  color:aliceblue;
+
+}
+.page1{
+  margin: 5vh 0 0;
+  /* padding: 20vh 20vh;   */
+  padding: 0 60vh 0 10vh;
+  background-image: url(../img/undraw_night_calls_-5-jh7.svg);  
+  background-size: 100%;
+  text-align: left;
+  scroll-snap-align: start;
+}
+.lines1{
+  display: inline-block;
+  max-width: 50vh;
+  height: 50vh;
+  margin: 5vh;
+  background-color: white;
+  writing-mode: vertical-rl;
+  overflow: scroll hidden;
+  border-radius: 10px;
+  z-index: 10;
+  opacity: .5;
+}
+aside img{
+
+  width:60vh;
+  z-index: 20;
+  opacity: .7;
+}
+h2{
+  font-size: medium;
+  display: inline-block;
+  background-color: rgb(136, 46, 46,.5);
+  height: 90vh;
+  margin: 0 auto ;
+  padding: 15px 80px;
+  border-radius: 4px;
+  color: aliceblue;
+}
+.page2{
+  height: 100%;
+  width: 180vh;
+  background-image: url(../img/undraw_mobile_encryption_re_yw3o.svg),url(../img/undraw_reminder_re_fe15.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: left center,right center;
+  margin:0;
+}
+.lines2{
+
+  height: 50vh;
+  width:45vh;
+  margin: 15vh 0vh 40vh 80vh;
+  background-color: white;
+  writing-mode: vertical-rl;
+  overflow: scroll hidden;
+  border-radius: 4px;
+  color:rgb(241, 143, 143);
+
+}
+/* 読み始める。のチェックボックスが押されると、
+footerが第二ヘッダーになり入れ替わる。
+その際アニメーション(アニメーションでやる)と、positionの設定を
+疑似クラスで入れる（できんの？）
+以前のヘッダーはz-indexで押しやる
+疲れたのでまた今度やる。
+ちなみにポジションが疑似クラスで動くかは知らない
+
+3回目の入れ替わり、もしくは別の方法として、ヘッダーくんの背景画像をフッター君と同じにする。
+ついでに背景色と同じにしておいてnoneをかけておいた文字もcssを外す
+*/
+ footer{ 
+  width: 100%;
+  background-image: url(../img/premium_photo-1700786282023-e1a6eb2c41d4.avif);
+  background-size: auto;
+  background-repeat: repeat-x;
+  z-index: 80;
+
+  /* transition-property: rotate;
+  transition-duration: 3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0ms; */
+ }
+ 
+#checkbox:checked ~ footer{
+  position: fixed;
+  width: 10%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  animation-name: replace;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+}
+ol{
+  display:flex block;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0;
+}
+li{
+  display: inline;
+}
+.replace{
+  background-image: url(../img/buildings-7848348_1920.jpg);
+  background-size: cover;
+  scroll-snap-align: start;
+
+}
+.replace div{
+  background-color: black;
+  transition-property: background-color;
+  transition-duration: 3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0ms;
+
+  margin: auto 200px;
+}
+
+#checkbox:checked ~ div{
+  background-color: rgba(0,0,0,0);
+
+}
+
+.replace div p{
+  transition-property: background-color;
+  transition-duration: 3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0ms;
+  height: 100px;
+  width: 160px;
+  writing-mode: horizontal-tb;
+  overflow: scroll hidden;
+
+}
+#checkbox:checked ~ div p{
+  background-color: rgba(255,255,255,.5);
+
+}
+/* アニメーション：ヘッダーはゆっくり動かす。*/
+
+@keyframes replace{
+  0%{
+    transform: translateX(700px);
+    transform-origin: center;
+  }
+  0.01%{
+    transform:translateX(-700px);
+    transform-origin: center;
+  }
+  100%{
+  transform: translateX(0);
+  transform-origin: center;
+  }
+}
+/* 
+置き場
+{transform: translateX(-700px);
+  transform-origin: center;
+}
+3%{
+  transform: scale(1);
+  transform-origin: center;
+}
+5%{
+  transform:  scale(1.2);
+  transform-origin: center;
+}
+8%{
+  transform: scale(1);
+  transform-origin: center;
+}
+10% */
+
+.replace{
+  margin-left: 800px;
+}
+.replace::after{
+
+  content: "";
+  left: 0;
+  top:0;
+  width: 100%;
+  height:100%;
+  position: fixed;
+  z-index: -100;
+  background: url(../img/30551074_m.jpg) no-repeat center/cover;
+}
+
+/* 全然できん。。。疲れが溜まっててちょっと集中できる感じではないのでまたの機会にまわす 
+現時点でアニメーションが終わってないので、少し様子見*/

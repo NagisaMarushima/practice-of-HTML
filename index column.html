@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style column.css">
+  <title>三文小説</title>
+</head>
+<body>
+  <div class="body">
+  
+ <header><h1>一応何か書くよ。</h1></header>
+
+  <h2>Webで小説が書けたら面白いなと思い、作っています。 <br> 縦読みで読めるように考え中です。</h2>
+  
+  <div class="page1">
+  <section class="lines1">
+    <h3>テスト</h3>
+    <p>ここの文章は、縦書きにしてマーキスを作るぞ。できるかな？<br>
+      長い文章が必要なため、とにかくたくさん書いていく。文章を拝借してくるね。<br>
+      下記の文章を比較してください。
+      Betty Botter bought some butter, <br>
+      But, she said, this butter's bitter;<br>
+      If I put it in my batter,<br>
+      It will make my batter bitter,<br>
+      But a bit of better butterbr 
+      Will make my batter better. <br>
+      So she bought a bit of butter <br>
+      Better than her bitter butter,<br>
+      And she put it in her batter,<br>
+      And it made her batter better,<br>
+      So 'twas better Betty Botter <br>
+      Bought a bit of better butter. <br>
+   </p>
+   </section>
+
+  </div>
+
+  <p><h2>ヘッダー二個目！、スライドしていくはず。</h2><p>
+    <div class="page2"><section class="lines2">二ページ目が書かれているはずのページ！
+      <p>外のサイトでは、スクロール後にセクションがいくつも登場する場合、どうコーディングしているのか調べる。 <br>
+        一応物語の骨も書いておこうと思う。 <br>
+        <br>
+        主人公は、カップル大学生の女の子。男の子は、ほかの女性に気を向けていて、飼っている猫と会話する毎日。<br>
+        しかし、好きなアーティストのチケットが手に入り、男の子を誘うのでした。
+        <p>
+    </section>
+    </div>
+
+
+<div class="replace">
+  <input class="siori" name="siori" type="checkbox" id="checkbox">
+  <footer>目次 <label for="checkbox">旅をする</label>
+
+    <!-- 旅をする、の部分には、ボタン型の装飾を入れて、ボタンが押されたのがわかるアニメーションを入れよう -->
+
+    <nav><ol>
+    <li>女の子</li>
+    <li>男の子</li>
+    <li>歌</li>
+    <li>ビル</li>
+  </ol></nav></footer>
+
+
+  <div class="page3">
+    <!-- ニコニコの埋め込みタグが見当たらなかったため拝借しました。動作確認なし。
+    なんか使えそうなブログの記事コピペ
+    
+    レスポンシブ対応
+.video
+    position relative
+    padding-bottom 56.25%
+
+    & > iframe
+        position absolute
+        size 100% 100%
+        border none
+
+<iframe>はそのままだとサイズが変わらないので、position: absolute;で浮かせて親要素に同じ高さのpaddingを取ることで、可変になります。
+
+
+    -->
+
+
+    <div
+    style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"
+  >
+    <iframe
+      src="https://www.nicovideo.jp/watch/sm4988028"
+      style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"
+      allowfullscreen
+      scrolling="no"
+      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+    ></iframe>
+  </div>
+  どうやら始まる秒数も変えられるらしい。再生した瞬間に印象的なワードが始まるのも面白そう。 <br>
+  <p>ここで、動画を入れる。このページは、小説のようで小説にはできない表現を考えていく。 <br>
+  多分本を読んでいるときに動画も流れたら嬉しい。 <br>
+  流す動画は、ようつべから引っ張ってくる。 <br>
+  話の筋から言って、挿入歌がいいと思う。
+  動画を見ている間に、もっと文章を読んでもらう。 <br>
+  リピート機能はないけれど、5分で読み終わるくらいのやつがいいね。 <br>
+    めんどいのでpを拡張する(物理)</p>
+  <section>  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+  </div>
+</div>
+
+
+  <h2 class="page4Head">面倒くさいのでH2にしちゃうけど、何か考える</h2>
+
+  <section class="page4"><p>ここの文字は、猫にかぶさって表示される。<br>
+    猫は装飾なのでcontentで入れて、sectionの背後はなんかあれ、z-indexで浮いているようにする。<br>
+    そして浮いている中をdivタグの中に添加した要素(spanかな？インラインブロックに変えて色付けちゃえ。）が背後で素早く移動して<br>
+    なんか綺麗な感じになる予定 <br>
+    ちなみに動かすのはアニメーションにする</p></section>
+
+    <span>一応念のため文章添加 <br>ここはクレジットとして、使用した素材サイトさんや、使用した動画などを書いていく。 <br>
+      PCでは画像に乗って出てくる。SPでは上昇する文字として出てくる。 <br>
+      本当のフッターは、動いている文字の中の一部として、出てくるようにする。 <br>
+    </span>
+
+  </div>
+</body>
+</html>
