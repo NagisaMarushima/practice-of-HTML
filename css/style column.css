@@ -136,33 +136,32 @@ li{
   scroll-snap-align: start;
 
 }
-.replace div{
+.replace section{
   background-color: black;
   transition-property: background-color;
   transition-duration: 3s;
   transition-timing-function: ease-out;
   transition-delay: 0ms;
 
-  margin: auto 200px;
 }
 
-#checkbox:checked ~ div{
+#checkbox:checked ~ section{
   background-color: rgba(0,0,0,0);
 
 }
 
-.replace div p{
+.replace section p{
   transition-property: background-color;
   transition-duration: 3s;
   transition-timing-function: ease-out;
   transition-delay: 0ms;
-  height: 100px;
-  width: 160px;
+  height: 200px;
+  width: 400px;
   writing-mode: horizontal-tb;
   overflow: scroll hidden;
 
 }
-#checkbox:checked ~ div p{
+#checkbox:checked ~ section p{
   background-color: rgba(255,255,255,.5);
 
 }
@@ -200,7 +199,7 @@ li{
   transform-origin: center;
 }
 10% */
-
+/* 
 .replace{
   margin-left: 800px;
 }
@@ -214,7 +213,12 @@ li{
   position: fixed;
   z-index: -100;
   background: url(../img/30551074_m.jpg) no-repeat center/cover;
-}
+} */
 
 /* 全然できん。。。疲れが溜まっててちょっと集中できる感じではないのでまたの機会にまわす 
 現時点でアニメーションが終わってないので、少し様子見*/
+
+
+.page3{
+ display: flex;
+}
